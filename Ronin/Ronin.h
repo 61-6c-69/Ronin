@@ -2,6 +2,7 @@
 #include<iostream>
 #include<WinSock2.h>
 #include<Windows.h>
+#include<string>
 #include<vector>
 
 #pragma comment(lib,"Ws2_32.lib")
@@ -9,6 +10,7 @@
 
 #include "Config.h"
 #include"Log.h"
+#include"Helper.h"
 
 using namespace std;
 class Ronin{
