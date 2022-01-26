@@ -4,6 +4,7 @@
 #include<Windows.h>
 #include<string>
 #include<vector>
+#include<fstream>
 
 #pragma comment(lib,"Ws2_32.lib")
 

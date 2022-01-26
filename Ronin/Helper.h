@@ -12,7 +12,7 @@ public:
 	struct HURL{
 		char* protocol;
 		char* host;
-		int port;
+		int port = 80;
 		char* path = "/";
 		char* query;
 		char* hash;
@@ -28,4 +28,15 @@ public:
 
 	//parse url
 	static HURL ParseUrl(string url);
+
+	//check file exists
+	static bool FileExists(char* path){
+		ifstream ifs;
+
+		ifs.open(path);
+		bool ext = ifs.fail();
+		ifs.close();
+
+		return ext;
+	}
 };
