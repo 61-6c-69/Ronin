@@ -19,3 +19,5 @@
 #define CLONE_SHARE true
 
 #define GUI_TEXT_LENGTH 2048
+
+#define HTTP_USER_AGENT "Mozila/5.0"
