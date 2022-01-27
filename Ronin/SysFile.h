@@ -12,12 +12,27 @@ public:
 		Read = ios::in,
 		Write = ios::out,
 		Read_Write = ios::ate,
-		Append = ios::ate
+		Append = ios::app
 	};
 
 	SysFile& Open(char* path, FILE_FLAG ff);
 
 	size_t getLen();
 	char* ReadFile();
-	//void Write(char* data);
+	void WriteFile(char* data);
+	void Close();
+
+
+	bool Exists(){
+		return this->file_exists;
+	}
+	size_t Len(){
+		return this->file_len;
+	}
+	bool isOpen(){
+		return this->file.is_open();
+	}
+	~SysFile(){
+		this->Close();
+	}
 };
