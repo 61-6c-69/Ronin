@@ -2,11 +2,13 @@
 #include<iostream>
 #include<WinSock2.h>
 #include<Windows.h>
+#include<WinInet.h>
 #include<string>
 #include<vector>
 #include<fstream>
 
-#pragma comment(lib,"Ws2_32.lib")
+#pragma comment(lib, "wininet.lib")
+#pragma comment(lib, "Ws2_32.lib")
 
 
 #include "Config.h"
