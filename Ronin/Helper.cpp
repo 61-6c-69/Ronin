@@ -22,7 +22,7 @@ Helper::HURL Helper::ParseUrl(string url){
 
 	//host
 	if (url.find("/") || url.find(":") || url.find("?") || url.find("#")){
-		hurl.host = Helper::strTochr(url.substr(0, url.find(":") ? url.find(":") : (url.find("/") ? url.find("/") : url.find("#"))));
+		hurl.host = Helper::strTochr(url.substr(0, url.find(":")!= string::npos ? url.find(":") : (url.find("/") != string::npos ? url.find("/") : url.find("#"))));
 		url.erase(0, strlen(hurl.host));
 	}else{
 		hurl.host = Helper::strTochr(url);
@@ -32,7 +32,7 @@ Helper::HURL Helper::ParseUrl(string url){
 	//port
 	if (url.find(":") != string::npos){
 		hurl.port = stoi(url.substr(1, url.find("/") ? url.find("/") : url.length()-1));
-		url.erase(0, url.find("/") ? url.find("/") : url.length() - 1);
+		url.erase(0, url.find("/")!= string::npos ? url.find("/") : url.length() - 1);
 	}
 	
 	//path
@@ -41,7 +41,7 @@ Helper::HURL Helper::ParseUrl(string url){
 
 		//query
 		if (url.find("?")){
-			url.erase(0, url.find("?")+1);
+			url.erase(0, url.find("?"));
 			hurl.query = Helper::strTochr(url);
 		}
 

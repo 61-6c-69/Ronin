@@ -16,6 +16,7 @@ public:
 		char* path = "/";
 		char* query;
 		char* hash;
+		char* request = "/";
 	};
 
 	//string to char
@@ -25,9 +26,28 @@ public:
 		strcpy_s(p, strlen(p), str.c_str());
 		return p;
 	}
+	
+	//concat char
+	static char* ConcatChr(char* a, char* b){
+		size_t size = strlen(a) + strlen(b) + 1;
+		char* c = new char[size];
+
+		strcpy_s(c, size, a);
+		strcat_s(c, size, b);
+
+		return c;
+	}
 
 	//parse url
 	static HURL ParseUrl(string url);
+
+	//check is url
+	static bool isUrl(char* url){
+		if (Helper::ParseUrl(url).host != NULL){
+			return true;
+		}
+		return false;
+	}
 
 	//check file exists
 	static bool FileExists(char* path){

@@ -28,7 +28,7 @@ bool WinInet::OpenRequest(){
 	this->hrequest = HttpOpenRequest(
 		this->hconnect,
 		(this->method == WinInet::REQUEST_METHOD::GET ? "GET" : "POST") ,
-		this->url.path,
+		Helper::ConcatChr(this->url.path, this->url.query),
 		"HTTP/1.1",
 		NULL,
 		NULL,
@@ -52,20 +52,19 @@ char* WinInet::SendRequest(char* data){
 		NULL,
 		0,
 		data,
-		strlen(data)
+		(data == NULL ? 0 : strlen(data))
 		)
 	){
-		cout << GetLastError();
-		return "err";
+		return "";
 	}
+
 	while(InternetQueryDataAvailable(this->hrequest, &data_avilable, 0, 0) && data_avilable != 0){
-		if (!InternetReadFile(this->hrequest, buf, sizeof(buf), &data_read)){
-			
+		if (InternetReadFile(this->hrequest, buf, sizeof(buf), &data_read)){
+			if (data_read == 0){
+				return Helper::strTochr(data_str);
+			}
+			data_str.append(buf, data_read);
 		}
-		if (data_read == 0){
-			return Helper::strTochr(data_str);
-		}
-		data_str.append(buf, data_read);
 	}
 	
 	return Helper::strTochr(data_str);
