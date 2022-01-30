@@ -2,5 +2,5 @@
 Remote administration tool
 
 ============
-Ronin is Application for connect to multiple devices
+Ronin is a application for connecting to multiple devices
 
