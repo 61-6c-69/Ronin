@@ -8,7 +8,11 @@ public:
 		return "Hello";
 	}
 
-	void CommandCall() const override{
-		std::cout << "Hello World ;)";
+	void CommandCall(string data) const override{
+		std::cout << "Hello World ;)" << endl;
+
+		if (data.length()>0){
+			cout <<"data: " << data << endl;
+		}
 	}
 };

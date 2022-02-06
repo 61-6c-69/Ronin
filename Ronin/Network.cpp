@@ -16,7 +16,7 @@ void Network::DisConnect(){
 void ListenSocket(char* data){
 	try{
 		json::JSON obj = json::JSON::Load(data);
-		CommandMap::Init().Call(obj["command"].ToString());
+		CommandMap::Init().Call(obj["command"].ToString(), obj["body"].ToString());
 	}
 	catch (exception e){
 		cout << "json parse error";
