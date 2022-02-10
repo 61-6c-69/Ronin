@@ -6,6 +6,7 @@
 #include<string>
 #include<vector>
 #include<fstream>
+#include<wincrypt.h>
 
 #pragma comment(lib, "wininet.lib")
 #pragma comment(lib, "Ws2_32.lib")
