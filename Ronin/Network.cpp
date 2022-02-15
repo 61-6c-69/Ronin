@@ -19,7 +19,7 @@ void ListenSocket(char* data){
 		CommandMap::Init().Call(obj["command"].ToString(), obj["body"].ToString());
 	}
 	catch (exception e){
-		cout << "json parse error";
+		//log
 	}
 }
 

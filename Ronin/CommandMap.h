@@ -18,7 +18,6 @@ public:
 
 	void Add(Command* cmd){
 		if (cmd_map.count(cmd[0].CommandName())){
-			cout << "no1";
 			return;
 		}
 
@@ -30,7 +29,6 @@ public:
 
 	void Call(string cmd_name, string data){
 		if (!cmd_map.count(Helper::strTochr(cmd_name.c_str()))){
-			cout << "no2";
 			return;
 		}
 
