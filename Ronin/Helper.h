@@ -59,4 +59,15 @@ public:
 
 		return ext;
 	}
+
+	//string replace all
+	static string ReplaceAll(string str, string find, string to){
+		size_t pos = str.find(find);
+		while (pos != string::npos){
+			str.replace(pos, find.size(), to);
+			pos = str.find(find, pos + to.size());
+		}
+
+		return str;
+	}
 };
