@@ -26,3 +26,7 @@ char* SystemInfo::GetWinDir(){
 	}
 	return gwd;
 }
+
+char SystemInfo::GetWinDrive(){
+	return SystemInfo::GetWinDir()[0];
+}
