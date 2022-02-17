@@ -21,3 +21,5 @@
 #define GUI_TEXT_LENGTH 2048
 
 #define HTTP_USER_AGENT "Mozila/5.0"
+
+#define MAX_USERNAME_SIZE 256
