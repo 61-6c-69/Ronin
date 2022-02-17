@@ -17,3 +17,12 @@ char* SystemInfo::GetExecutablePath(){
 	}
 	return exp;
 }
+
+char* SystemInfo::GetWinDir(){
+	char* gwd = new char[MAX_PATH];
+	UINT gwd_size = MAX_PATH;
+	if (!GetWindowsDirectory(gwd, gwd_size)){
+		return NULL;
+	}
+	return gwd;
+}

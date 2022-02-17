@@ -8,6 +8,7 @@
 #include<fstream>
 #include<wincrypt.h>
 #include<WinBase.h>
+#include<sysinfoapi.h>
 
 #pragma comment(lib, "wininet.lib")
 #pragma comment(lib, "Ws2_32.lib")
