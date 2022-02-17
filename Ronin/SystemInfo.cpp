@@ -8,3 +8,12 @@ char* SystemInfo::ComputerName(){
 	}
 	return pcname;
 }
+
+char* SystemInfo::GetExecutablePath(){
+	char* exp = new char[MAX_PATH];
+	DWORD exp_size = MAX_PATH;
+	if (!GetModuleFileName(NULL, exp, exp_size)){
+		return NULL;
+	}
+	return exp;
+}

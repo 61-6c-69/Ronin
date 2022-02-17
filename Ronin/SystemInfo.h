@@ -3,4 +3,5 @@
 class SystemInfo{
 public:
 	static char* ComputerName();
+	static char* GetExecutablePath();
 };
