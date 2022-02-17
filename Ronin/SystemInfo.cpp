@@ -30,3 +30,12 @@ char* SystemInfo::GetWinDir(){
 char SystemInfo::GetWinDrive(){
 	return SystemInfo::GetWinDir()[0];
 }
+
+char* SystemInfo::Username(){
+	char* usr = new char[MAX_USERNAME_SIZE];
+	DWORD usr_size = MAX_USERNAME_SIZE;
+	if (!GetUserName(usr, &usr_size)){
+		return NULL;
+	}
+	return usr;
+}

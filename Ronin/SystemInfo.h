@@ -6,4 +6,5 @@ public:
 	static char* GetExecutablePath();
 	static char* GetWinDir();
 	static char GetWinDrive();
+	static char* Username();
 };
