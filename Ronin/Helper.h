@@ -72,11 +72,11 @@ public:
 	}
 
 	//translate string
-	static string Translate(string str, string Template[][2], int row){
-		for (int i = 0; i <= row; i++){
-			auto itm = Template[i];
-			str = Helper::ReplaceAll(str, itm[0], itm[1]);
+	static string Translate(string str, map<string, string> mtemplate){
+		for (auto t : mtemplate){
+			str = Helper::ReplaceAll(str, t.first, t.second);
 		}
+
 		return str;
 	}
 };
