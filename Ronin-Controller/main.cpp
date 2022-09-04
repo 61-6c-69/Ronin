@@ -2,6 +2,7 @@
 #include"Config.h"
 #include"SysStrings.h"
 #include"Helper.h"
+#include"ReadCommand.h"
 
 using namespace std;
 
@@ -30,6 +31,4 @@ int main(){
 	for(int i = 0; i < commands_array.size(); i++){
 		cout << commands_array[i] <<endl;
 	}
-
-	cin.get();
 }
