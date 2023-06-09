@@ -23,3 +23,5 @@
 #define HTTP_USER_AGENT "Mozila/5.0"
 
 #define MAX_USERNAME_SIZE 256
+
+#define PROCESS_OUTPUT_BUFF_SIZE 1024
