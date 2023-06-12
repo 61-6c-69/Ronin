@@ -4,7 +4,7 @@ SysFile& SysFile::Open(char* path, SysFile::FILE_FLAG ff){
 	if (this->file.is_open()){
 		this->Close();
 	}
-	this->file.open(path, ff | ios::binary);
+	this->file.open(path, ff);
 	this->file_exists = this->file.fail() ? false : true;
 	return *this;
 }
@@ -34,12 +34,12 @@ char* SysFile::ReadFile(){
 	return buf;
 }
 
-void SysFile::WriteFile(char* data){
+void SysFile::WriteFile(char* data, size_t size){
 	if (!this->file.is_open()){
 		return;
 	}
 
-	this->file.write(data, strlen(data));
+	this->file.write(data, size == 0 ? strlen(data) : size);
 	this->file.flush();
 }
 

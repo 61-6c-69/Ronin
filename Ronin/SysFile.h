@@ -12,14 +12,16 @@ public:
 		Read = ios::in,
 		Write = ios::out,
 		Read_Write = ios::ate,
-		Append = ios::app
+		Append = ios::app,
+		Read_Binary = ios::binary|ios::in,
+		Write_Binary = ios::binary|ios::out,
 	};
 
 	SysFile& Open(char* path, FILE_FLAG ff);
 
 	size_t getLen();
 	char* ReadFile();
-	void WriteFile(char* data);
+	void WriteFile(char* data, size_t size = 0);
 	void Close();
 
 
