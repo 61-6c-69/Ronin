@@ -7,7 +7,7 @@
 
 #define API_URL "http://127.0.0.1/api"
 
-#define INSTALL_PATH "<windrive>/<appname>/<appname>"
+#define INSTALL_PATH "<WINDRIVE><APPNAME>/<APPNAME>.exe"
 
 #define START_UP true
 #define START_UP_METHOD 1 //1 = registery 2 = dir
