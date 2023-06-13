@@ -11,7 +11,7 @@ bool FileHelper::CopyTo(char* src, char* to) {
 		return false;
 
 	SysFile wf;
-	wf.Open(to, wf.Write_Binary).WriteFile(file);
+	wf.Open(to, wf.Write_Binary).WriteFile(file, size);
 	wf.Close();
 
 	return true;
