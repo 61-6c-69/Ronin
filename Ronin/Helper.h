@@ -21,9 +21,9 @@ public:
 
 	//string to char
 	static char* strTochr(string str){
-		char *p = new char[strlen(str.c_str())];
+		char *p = new char[str.length()+1];
 		//strcpy(p, str.c_str());
-		strcpy_s(p, strlen(p), str.c_str());
+		strcpy_s(p, str.length()+1, str.c_str());
 		return p;
 	}
 	
