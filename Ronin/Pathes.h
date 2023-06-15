@@ -14,6 +14,6 @@ public:
 	}
 
 	static char* StartUpRegistr() {
-		return "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run";
+		return "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
 	}
 };
