@@ -20,8 +20,6 @@ private:
 			TranslateTemplate::getTemplate()
 		));
 
-		//
-
 		//file not exists
 		if (!Helper::FileExists(installed_path)) {
 			return;
