@@ -1,9 +1,12 @@
-#include<iostream>
+//use your app
+#include"App.h"
 
 using namespace std;
 
-void main(){
+void main() {
+	//welcome message
+	cout << "\nHello Client" << "\nIam " << APP_NAME;
 
-	cout << "\n\n\nRunning";
-	cin.get();
+	//call app
+	App::Run();
 }
