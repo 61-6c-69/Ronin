@@ -1,3 +1,4 @@
 static const char* ErrorLogs[] = {
-	"tests"
+	"tests",
+	"disable country ditected"
 };
