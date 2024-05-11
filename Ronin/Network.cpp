@@ -13,6 +13,7 @@ void Network::DisConnect(){
 	}
 }
 
+
 void ListenSocket(char* data){
 	try{
 		json::JSON obj = json::JSON::Load(data);
@@ -29,4 +30,10 @@ bool Network::Listen(){
 		return true;
 	}
 	return false;
+}
+
+void Network::Send(char* data) {
+	if (!this->socket.Send(data)) {
+		//log
+	}
 }

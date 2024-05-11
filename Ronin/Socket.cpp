@@ -1,4 +1,5 @@
 #include"Socket.h"
+#pragma warning(disable:4996) 
 
 bool Socket::Connect(){
 	WSADATA wsa;

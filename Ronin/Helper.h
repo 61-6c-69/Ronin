@@ -79,4 +79,9 @@ public:
 
 		return str;
 	}
+
+	static string BasePath(string path) {
+		size_t base = path.find_last_of("/\\");
+		return path.substr(0, base);
+	}
 };

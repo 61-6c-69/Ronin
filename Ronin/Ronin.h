@@ -6,6 +6,7 @@
 #include<string>
 #include<vector>
 #include<fstream>
+#include<direct.h>
 #include<wincrypt.h>
 #include<WinBase.h>
 #include<sysinfoapi.h>

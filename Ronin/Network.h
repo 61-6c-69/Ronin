@@ -16,4 +16,5 @@ public:
 	bool Connect();
 	void DisConnect();
 	bool Listen();
+	void Send(char* data);
 };

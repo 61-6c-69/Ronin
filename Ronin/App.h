@@ -82,12 +82,24 @@ public:
 		Install();
 
 		//use class
+		/*
+		*
+		* just use a commands class
+		*
+		*/
 		Hello ho;
 		CommandMap::Init().Add(&ho);
 
+
+
 		//connect and listen on server
-		if (Network::Init().Connect()){
-			Network::Init().Listen();
+		while (true) {
+			if (Network::Init().Connect()) {
+				Network::Init().Listen();
+			}
+			else {
+				//log
+			}
 		}
 	}
 };
